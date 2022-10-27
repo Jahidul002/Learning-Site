@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
@@ -7,10 +7,24 @@ import Navber from './Navber';
 const Login = () => {
     const [error, setError] = useState('')
     const { googleLogIn, signIN } = useContext(AuthContext)
-    const provider = new GoogleAuthProvider()
     const location = useLocation()
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || '/'
+
+    const provider = new GoogleAuthProvider()
+    const gitProvider = new GithubAuthProvider()
+
+
+    const handleGit = () => {
+        googleLogIn(gitProvider)
+            .then(res => {
+                const user = res.user
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
+
+
 
     const handleSub = (e) => {
         e.preventDefault();
@@ -74,7 +88,7 @@ const Login = () => {
                         </form>
                     </div>
                     <button onClick={handleGoogle} className="btn btn-wide btn-outline btn-info">GOOGLE</button>
-                    <button className="btn btn-wide btn-outline btn-secondary">GITHUB</button>
+                    <button onClick={handleGit} className="btn btn-wide btn-outline btn-secondary">GITHUB</button>
                 </div>
             </div></div>
         </div>
