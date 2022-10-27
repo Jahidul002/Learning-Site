@@ -17,7 +17,7 @@ const Navber = () => {
 
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-emerald-800">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,14 +30,14 @@ const Navber = () => {
                         <Link to="">BLOG</Link>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link className='text-2xl font-mono bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded-lg' to="/"><span className='text-amber-500'>Develop</span> MY <span className='text-amber-500'>Plots</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <Link className='mx-2 font-semibold text-xl' to="/">Home</Link>
-                    <Link className='mx-2 font-semibold text-xl' to="/courses">Course</Link>
-                    <Link className='mx-2 font-semibold text-xl' to="">FAQ</Link>
-                    <Link className='mx-2 font-semibold text-xl' to="">BLOG</Link>
+                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/">Home</Link>
+                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/courses">Course</Link>
+                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="">FAQ</Link>
+                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="">BLOG</Link>
                 </ul>
             </div>
             <div className="navbar-end">
@@ -49,7 +49,7 @@ const Navber = () => {
                     }
                 </div>
                 {
-                    user?.uid ? <button onClick={handleLogOut} class="btn btn-sm btn-outline ">LogUut</button> :
+                    user?.uid ? <button onClick={handleLogOut} class="btn btn-sm btn-outline ">Log Out</button> :
                         <>
                             <button className="btn btn-sm btn-outline "><Link className='text-black mx-1' to="/register">Register</Link></button>
                             <button className="btn btn-sm  btn-outline"><Link className='text-black' to="/login">Login</Link></button>

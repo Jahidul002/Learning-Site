@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Navber from './Navber';
 
 const CoureseData = () => {
@@ -10,7 +10,7 @@ const CoureseData = () => {
         <div>
             <Navber></Navber>
             <div className='container mx-auto'>
-                <h1>Thanks For purchase Our {name} Course</h1>
+                <button className='btn btn-outline btn-info'><Link to="/courses">Back</Link></button>
                 <div className='flex flex-col justify-center items-center'>
                     <img src={img} alt="" />
                     <span className='text-3xl text-amber-700 font-semibold'> {name}</span>
