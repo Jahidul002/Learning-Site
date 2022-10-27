@@ -7,11 +7,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
 
     if (loading) {
-        return <button className='rounded-full bg-indigo-500' type="button" disabled>
-            <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
-            </svg>
-            Processing...
-        </button>
+        return <button className="btn btn-square loading"></button>
     }
 
     if (!user) {
