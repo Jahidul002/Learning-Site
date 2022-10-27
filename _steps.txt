@@ -1,0 +1,5 @@
+1.Firebase installed
+2.router dom installed
+3.tailwind installed
+4.daisi ui installed
+5.hero icon
