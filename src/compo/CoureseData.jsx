@@ -1,6 +1,16 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Navber from './Navber';
+import Pdf from "react-to-pdf";
+
+
+const ref = React.createRef();
+const options = {
+    orientation: 'landscape',
+    unit: 'in',
+    format: [4, 2]
+};
+
 
 const CoureseData = () => {
     const allData = useLoaderData()
@@ -9,7 +19,12 @@ const CoureseData = () => {
     return (
         <div>
             <Navber></Navber>
-            <div className='container mx-auto'>
+            <div className='text-right'>
+                <Pdf targetRef={ref} options={options} filename={name}>
+                    {({ toPdf }) => <button className='btn btn-wide' onClick={toPdf}>Generate Pdf</button>}
+                </Pdf>
+            </div>
+            <div className='container mx-auto' ref={ref}>
                 <button className='btn btn-outline btn-info'><Link to="/courses">Back</Link></button>
                 <div className='flex flex-col justify-center items-center'>
                     <img src={img} alt="" />

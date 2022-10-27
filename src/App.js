@@ -19,17 +19,17 @@ function App() {
     {
       path: 'courses',
       element: <Root></Root>,
-      loader: () => fetch('http://localhost:5000/courses'),
+      loader: () => fetch('https://learning-site-server.vercel.app/courses'),
       children: [
         {
           path: '/courses',
-          loader: () => fetch('http://localhost:5000/courses'),
+          loader: () => fetch('https://learning-site-server.vercel.app/courses'),
           element: <SecondHome></SecondHome>
         },
         {
           path: '/courses/:id',
           loader: async ({ params }) => {
-            return fetch(`http://localhost:5000/courses/${params.id}`)
+            return fetch(`https://learning-site-server.vercel.app/courses/${params.id}`)
           },
           element: <CourseDetails></CourseDetails>,
         }
@@ -38,7 +38,7 @@ function App() {
     {
       path: 'single/:id',
       loader: async ({ params }) => {
-        return fetch(`http://localhost:5000/courses/${params.id}`)
+        return fetch(`https://learning-site-server.vercel.app/courses/${params.id}`)
       },
       element: <PrivateRoute><CoureseData></CoureseData></PrivateRoute>
     },
