@@ -78,7 +78,7 @@ const Register = () => {
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary ">Login</button>
+                                <button className="btn btn-primary ">Registation</button>
                             </div>
                             <span className='text-red-500'> {error}</span>
                             <p><small>Already have an account?<span className='underline text-blue-700 font-bold'><Link to="/login">Log In</Link></span></small></p>

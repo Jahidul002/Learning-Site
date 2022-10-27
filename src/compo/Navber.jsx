@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
 import { BeakerIcon, UserCircleIcon } from '@heroicons/react/24/solid'
-
+// import { Switch } from 'antd';
 
 const Navber = () => {
     const { user, LogOut } = useContext(AuthContext)
@@ -30,14 +30,15 @@ const Navber = () => {
                         <Link to="/blog">BLOG</Link>
                     </ul>
                 </div>
-                <Link className='text-2xl font-mono bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded-lg' to="/"><span className='text-amber-500'>Develop</span> MY <span className='text-amber-500'>Plots</span></Link>
+                <Link className='md:text-2xl font-mono bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded-lg' to="/"><small><span className='text-amber-500'>Develop</span> MY <span className='text-amber-500'>Plots</span></small></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/">Home</Link>
-                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/courses">Course</Link>
-                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/faq">FAQ</Link>
-                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/blog">BLOG</Link>
+                    <Link className='mx-2 text-black bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/">Home</Link>
+                    <Link className='mx-2 text-black bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/courses">Course</Link>
+                    <Link className='mx-2 text-black bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/faq">FAQ</Link>
+                    <Link className='mx-2 text-black bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/blog">BLOG</Link>
+                    {/* <Switch /> */}
                 </ul>
             </div>
             <div className="navbar-end">
