@@ -7,6 +7,8 @@ import SecondHome from './compo/SecondHome';
 import Login from './compo/Login';
 import Register from './compo/Register';
 import PrivateRoute from './compo/PrivateRoute';
+import Blog from './compo/Blog';
+import Faq from './compo/Faq';
 
 
 function App() {
@@ -49,6 +51,14 @@ function App() {
     {
       path: 'register',
       element: <Register></Register>
+    },
+    {
+      path: 'blog',
+      element: <Blog></Blog>
+    },
+    {
+      path: 'faq',
+      element: <Faq></Faq>
     }
   ])
 

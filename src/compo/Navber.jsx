@@ -26,8 +26,8 @@ const Navber = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <Link to="/">Home</Link>
                         <Link to="/courses">Course</Link>
-                        <Link to="">FAQ</Link>
-                        <Link to="">BLOG</Link>
+                        <Link to="/faq">FAQ</Link>
+                        <Link to="/blog">BLOG</Link>
                     </ul>
                 </div>
                 <Link className='text-2xl font-mono bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded-lg' to="/"><span className='text-amber-500'>Develop</span> MY <span className='text-amber-500'>Plots</span></Link>
@@ -36,8 +36,8 @@ const Navber = () => {
                 <ul className="menu menu-horizontal p-0">
                     <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/">Home</Link>
                     <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/courses">Course</Link>
-                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="">FAQ</Link>
-                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="">BLOG</Link>
+                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/faq">FAQ</Link>
+                    <Link className='mx-2 bg-emerald-600 hover:bg-emerald-900 px-3 py-1 rounded-md font-semibold text-xl' to="/blog">BLOG</Link>
                 </ul>
             </div>
             <div className="navbar-end">
